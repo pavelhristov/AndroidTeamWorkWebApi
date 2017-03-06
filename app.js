@@ -19,6 +19,6 @@ require('./configurations/local-passport.js')({ User });
 
 require('./routes')({ app, controllers });
 
-app.listen(config.port, function () {
+app.listen(config.port, function() {
     console.log('App listening on port: ' + config.port);
 });

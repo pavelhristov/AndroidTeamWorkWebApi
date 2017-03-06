@@ -4,8 +4,9 @@ module.exports = function({ environment }) {
             cookieName: "team-placeholder",
             webToken: "web-token-42",
             sessionSecret: 'secret-session',
-            connectionString: 'mongodb://placeholder:placeh0lder@ds056549.mlab.com:56549/planitdb', //'mongodb://localhost:27017/placeholder',
-            port: 3000,
+            connectionString: 'mongodb://placeholder:placeh0lder@ds056549.mlab.com:56549/planitdb',
+            //'mongodb://localhost:27017/placeholder',
+            port: process.env.PORT || 3000,
         },
         production: {
             cookieName: process.env.COOKIE_NAME,
@@ -16,5 +17,5 @@ module.exports = function({ environment }) {
         }
     };
 
-    return config[environment];
+    return config.development;
 };
